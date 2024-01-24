@@ -2,6 +2,7 @@ HELP.md
 .idea/
 *.iml
 *.Ds_Store
+src/main/resources/static/
 src/main/resources/*.yml
 .gradle
 build/
