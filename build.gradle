@@ -60,11 +60,15 @@ dependencies {
     // Web
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    // JPA
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-
     // Validation
     implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Netty/Resolver/DNS/Native/MacOS
+    implementation 'io.netty:netty-resolver-dns-native-macos:4.1.90.Final:osx-aarch_64'
 
     // Docker Compose
 //    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
@@ -72,12 +76,17 @@ dependencies {
     // MySQL
     runtimeOnly 'com.mysql:mysql-connector-j'
 
-    // Lombok
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    // JPA
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // TestContainers
+    testImplementation "org.testcontainers:testcontainers:1.19.3"
+    testImplementation "org.testcontainers:junit-jupiter:1.19.3"
+    testImplementation 'org.testcontainers:mysql:1.19.3'
+    testImplementation "org.testcontainers:jdbc:1.19.3"
 
     // Rest Docs
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
@@ -88,11 +97,17 @@ dependencies {
     // Swagger UI
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 
-    // TestContainers
-    testImplementation "org.testcontainers:testcontainers:1.19.3"
-    testImplementation "org.testcontainers:junit-jupiter:1.19.3"
-    testImplementation 'org.testcontainers:mysql:1.19.3'
-    testImplementation "org.testcontainers:jdbc:1.19.3"
+    // Spring Security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation "org.springframework.security:spring-security-test"
+
+    // OAuth2
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+    // JWT
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
 
 }
 
