@@ -1,5 +1,7 @@
-package com.onetuks.happyparkingserver.auth;
+package com.onetuks.happyparkingserver.auth.repository;
 
+import com.onetuks.happyparkingserver.auth.model.Member;
+import com.onetuks.happyparkingserver.auth.model.vo.ClientProvider;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

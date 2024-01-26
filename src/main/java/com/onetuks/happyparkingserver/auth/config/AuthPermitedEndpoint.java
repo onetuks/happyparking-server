@@ -1,4 +1,4 @@
-package com.onetuks.happyparkingserver.auth;
+package com.onetuks.happyparkingserver.auth.config;
 
 public class AuthPermitedEndpoint {
 

@@ -1,4 +1,4 @@
-package com.onetuks.happyparkingserver.auth;
+package com.onetuks.happyparkingserver.auth.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

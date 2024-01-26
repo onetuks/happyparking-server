@@ -1,4 +1,4 @@
-package com.onetuks.happyparkingserver.auth;
+package com.onetuks.happyparkingserver.auth.oauth.dto;
 
 import static lombok.AccessLevel.PRIVATE;
 

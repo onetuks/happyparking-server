@@ -1,4 +1,4 @@
-package com.onetuks.happyparkingserver.auth;
+package com.onetuks.happyparkingserver.global.config;
 
 import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
