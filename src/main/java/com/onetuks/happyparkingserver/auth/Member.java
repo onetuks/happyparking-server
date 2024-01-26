@@ -31,8 +31,8 @@ public class Member {
     private String socialId;
 
     @Enumerated(value = STRING)
-    @Column(name = "provider", nullable = false)
-    private OAuth2Provider oAuth2Provider;
+    @Column(name = "client-provider", nullable = false)
+    private ClientProvider clientProvider;
 
     @Enumerated(value = STRING)
     @Column(name = "role", nullable = false)
@@ -41,22 +41,22 @@ public class Member {
     private Member(
             String nickname,
             String socialId,
-            OAuth2Provider oAuth2Provider,
+            ClientProvider clientProvider,
             RoleType roleType
     ) {
         this.nickname = nickname;
         this.socialId = socialId;
-        this.oAuth2Provider = oAuth2Provider;
+        this.clientProvider = clientProvider;
         this.roleType = roleType;
     }
 
     public static Member of(
             String nickname,
             String socialId,
-            OAuth2Provider oAuth2Provider,
+            ClientProvider clientProvider,
             RoleType roleType
     ) {
-        return new Member(nickname, socialId, oAuth2Provider, roleType);
+        return new Member(nickname, socialId, clientProvider, roleType);
     }
 
 }
