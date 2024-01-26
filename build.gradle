@@ -125,6 +125,13 @@ tasks.named('asciidoctor') {
     dependsOn test
 }
 
+def excludes_regex = [
+        '**/Q*',
+        '**/global/**',
+        '**/*Application*',
+        "**/auth/**"
+]
+
 tasks.named('jacocoTestReport') {
     dependsOn test
 
@@ -136,12 +143,8 @@ tasks.named('jacocoTestReport') {
 
     classDirectories.setFrom(
             files(classDirectories.files.collect {
-                fileTree(dir: it, excludes: [
-                        '**/Q*',
-                        '**/global/**',
-                        '**/*Application*'
-        ])
-    }))
+                fileTree(dir: it, excludes: excludes_regex)
+            }))
 
     finalizedBy('jacocoTestCoverageVerification')
 }
@@ -175,11 +178,7 @@ tasks.named('jacocoTestCoverageVerification') {
                 minimum = 0.5
             }
 
-            excludes = [
-                    '**/Q*',
-                    '**.global.**',
-                    '**.*Application*'
-            ]
+            excludes = excludes_regex
         }
     }
 }
