@@ -8,6 +8,7 @@ public class AuthPermitedEndpoint {
     protected static final String[] ENDPOINTS = new String[]{
             "/",
             "/auth/kakao",
+            "/auth/google",
             "/error",
             "/docs/**"
     };
