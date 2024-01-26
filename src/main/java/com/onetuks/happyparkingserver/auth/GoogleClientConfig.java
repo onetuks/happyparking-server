@@ -10,14 +10,14 @@ import org.springframework.security.oauth2.core.oidc.IdTokenClaimNames;
 @Configuration
 public class GoogleClientConfig {
 
-    @Value("${oauth.google.clientId}")
+    @Value("${oauth.google.client-id}")
     private String clientId;
 
-    @Value("${oauth.google.clientSecret}")
+    @Value("${oauth.google.client-secret}")
     private String clientSecret;
 
     public ClientRegistration googleClientRegistration() {
-        return ClientRegistration.withRegistrationId("kakao")
+        return ClientRegistration.withRegistrationId("google")
                 .clientId(clientId)
                 .clientSecret(clientSecret)
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)

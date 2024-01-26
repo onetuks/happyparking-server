@@ -8,10 +8,10 @@ import org.springframework.security.oauth2.core.AuthorizationGrantType;
 @Configuration
 public class KakaoClientConfig {
 
-    @Value("${oauth.kakao.clientId}")
+    @Value("${oauth.kakao.client-id}")
     private String clientId;
 
-    @Value("${oauth.kakao.clientSecret}")
+    @Value("${oauth.kakao.client-secret}")
     private String clientSecret;
 
     public ClientRegistration kakaoClientRegistration() {
