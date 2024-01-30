@@ -4,6 +4,7 @@ HELP.md
 *.Ds_Store
 src/main/resources/static/
 src/main/resources/*.yml
+src/test/resources/*.yml
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
