@@ -1,4 +1,4 @@
-package com.onetuks.happyparkingserver.global.home;
+package com.onetuks.happyparkingserver;
 
 import static com.epages.restdocs.apispec.MockMvcRestDocumentationWrapper.document;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
