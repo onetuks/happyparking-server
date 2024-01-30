@@ -118,6 +118,12 @@ dependencies {
     // Caffeine
     implementation group: 'com.github.ben-manes.caffeine', name: 'caffeine', version: '3.1.8'
 
+    // Spring Actuator
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    // Prometheus
+    runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+
 }
 
 tasks.named('test') {
