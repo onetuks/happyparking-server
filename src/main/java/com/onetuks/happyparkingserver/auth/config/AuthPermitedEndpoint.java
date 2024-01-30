@@ -10,6 +10,7 @@ public class AuthPermitedEndpoint {
             "/auth/kakao",
             "/auth/google",
             "/error",
-            "/docs/**"
+            "/docs/**",
+            "/actuator/**"
     };
 }

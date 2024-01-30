@@ -18,7 +18,7 @@ public class AuthHeaderUtil {
         String httpHeaderAuthorizationString = request.getHeader(HEADER_AUTHORIZATION);
 
         if (httpHeaderAuthorizationString == null || !httpHeaderAuthorizationString.startsWith(TOKEN_PREFIX)) {
-            throw new TokenValidFailedException(EMPTY_HEADER_AUTHORIZATION);
+            return null;
         }
 
         return httpHeaderAuthorizationString.substring(TOKEN_PREFIX.length());
