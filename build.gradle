@@ -27,7 +27,8 @@ jacoco {
 
 openapi3 {
     servers = [
-            { url = "http://localhost:8080" }
+            { url = "http://localhost:8080" },
+            { url = "http://server:8080" }
 //            { url = "https://서버url" }
     ]
     title = "Happy Parking"
@@ -73,7 +74,8 @@ dependencies {
     // Docker Compose
 //    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 
-    // MySQL
+    // PostgreSQL
+    implementation 'org.postgresql:postgresql'
     runtimeOnly 'org.postgresql:postgresql'
 
     // JPA
